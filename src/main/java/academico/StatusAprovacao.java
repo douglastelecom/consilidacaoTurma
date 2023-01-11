@@ -37,7 +37,7 @@ public enum StatusAprovacao {
 	APR {
 		@Override
 		public String getMessage() {
-			return "Aluno aprovado com média maior ou igual a sete.";
+			return "Aluno aprovado com média maior ou igual a sete e meio.";
 		}
 
 		@Override
@@ -48,7 +48,7 @@ public enum StatusAprovacao {
 	APRN {
 		@Override
 		public String getMessage() {
-			return "Aluno com média entre cinco e sete e que não tirou nenhuma nota inferior a três.";
+			return "Aluno com média acima de 5 e sem notas abaixo de 4 ou com média acima de 6 e sem notas abaixo de 3.";
 		}
 
 		@Override

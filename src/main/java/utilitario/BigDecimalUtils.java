@@ -41,9 +41,11 @@ public class BigDecimalUtils {
 	}
 
 	public static BigDecimal calcularMedia(BigDecimal op1, BigDecimal op2, BigDecimal op3) {
-		BigDecimal somatorio = op1.add(op2).add(op3);
-		BigDecimal media = somatorio.divide(VALOR_3, RoundingMode.HALF_EVEN);
-
+		BigDecimal op1Pesado = op1.multiply(BigDecimal.valueOf(4));
+		BigDecimal op2Pesado = op2.multiply(BigDecimal.valueOf(5));
+		BigDecimal op3Pesado = op3.multiply(BigDecimal.valueOf(6));
+		BigDecimal somatorioPesado = op1Pesado.add(op2Pesado).add(op3Pesado);
+		BigDecimal media = somatorioPesado.divide(BigDecimal.valueOf(15),RoundingMode.HALF_EVEN);
 		return media;
 	}
 }
